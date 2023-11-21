@@ -7,7 +7,7 @@ const config: HardhatUserConfig = {
   solidity: "0.8.17",
   networks: {
     lukso: {
-      url: "https://rpc.testnet.lukso.network",
+      url: "https://rpc.l14.lukso.network/",
       accounts: [`0x${process.env.PRIVATE_KEY}`]
     }
   }
