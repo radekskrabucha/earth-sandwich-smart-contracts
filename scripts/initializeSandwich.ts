@@ -1,26 +1,22 @@
 import { ethers } from "hardhat"
 
 async function main() {
-  const [deployer] = await ethers.getSigners()
-  const contractAddress = "0xC51C514a5e082A59ed94Eb92947cd7cad26b93fc"
+  const contractAddress = "0xc408Fe764c6a903cE046036B14A87F7280024541" // Replace with your contract address
   const EarthSandwichNFT = await ethers.getContractAt(
     "EarthSandwichNFT",
     contractAddress
   )
 
-  const sandwichId = ethers.id("some random string")
-
-  const sandwichName = "Hello Sandwich"
-  const participantAddresses = ["0xc975653D6C35463732ce93cE98e010D48f39ff19"]
+  const sandwichName = "Hello Sandwich" // Replace with your sandwich name
+  const participantAddresses = ["0xc975653D6C35463732ce93cE98e010D48f39ff19"] // Replace with your participant addresses
 
   const transaction = await EarthSandwichNFT.initiateSandwich(
     sandwichName,
-    sandwichId,
     participantAddresses
   )
   await transaction.wait()
 
-  console.log(`Sandwich '${sandwichName}' initiated with ID: ${sandwichId}`)
+  console.log(`Sandwich '${sandwichName}' initiated`)
 }
 
 main()
