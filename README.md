@@ -9,6 +9,12 @@ EarthSandwich is an innovative platform on the Lukso blockchain that allows user
 - Mint unique NFTs representing completed EarthSandwiches.
 - Query sandwich details and participant information.
 
+## Frontend
+👉 [Frontend repo](https://github.com/radekskrabucha/earth-sandwich-front-app)
+
+👉 [Live demo](https://earthsandwich.vercel.app)
+ 
+
 ## Technology Stack
 - Solidity ^0.8.17
 - Lukso LSP8 Identifiable Digital Asset Standard
