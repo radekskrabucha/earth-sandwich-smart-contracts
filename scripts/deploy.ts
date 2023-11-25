@@ -3,7 +3,7 @@ import { ethers } from 'hardhat'
 async function main() {
     const [deployer] = await ethers.getSigners();
     const EarthSandwichNFTFactory = await ethers.getContractFactory("EarthSandwichNFT");
-    const earthSandwichNFT = await EarthSandwichNFTFactory.deploy("EarthSandwich", "ESAND", deployer.address);
+    const earthSandwichNFT = await EarthSandwichNFTFactory.deploy(deployer.address);
 
     await earthSandwichNFT.waitForDeployment();
 
